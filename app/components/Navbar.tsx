@@ -8,12 +8,8 @@ import {
   HStack,
   Link,
   IconButton,
-  Button,
   Menu,
   MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
@@ -21,9 +17,27 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-const Links = ['MAToken', 'NFT'];
+const NavList = [
+    {
+      text: 'ERC20 TOKEN',
+      link: '/Token'
+    },
+    {
+      text: 'NFT',
+      link: '/Nft'
+    },
+    {
+      text: 'Staking',
+      link: '/Stacking'
+    },
+    {
+      text: 'Sign Message',
+      link: '/Message'
+    },
+  
+  ]
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({ children, link }: { children: ReactNode, link: string }) => (
   <Link
     px={2}
     py={1}
@@ -32,7 +46,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={`${children.toString()}`}>
+    href={link}>
     {children}
   </Link>
 );
@@ -75,8 +89,8 @@ export default function Navbar() {
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {NavList.map((link) => (
+                <NavLink link={link.link}  key={link.text}>{link.text}</NavLink>
               ))}
             </HStack>
           </HStack>
@@ -85,8 +99,8 @@ export default function Navbar() {
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {NavList.map((link) => (
+                <NavLink link={link.link} key={link.text}>{link.text}</NavLink>
               ))}
             </Stack>
           </Box>

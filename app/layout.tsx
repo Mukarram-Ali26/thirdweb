@@ -1,6 +1,5 @@
 import Footer from "./components/Footer"
 import ChakraWrapper from "./components/chakra"
-import Container from "@chakra-ui/react"
 import Navbar from "./components/Navbar"
 
 export default function RootLayout({
