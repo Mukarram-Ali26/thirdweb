@@ -1,4 +1,7 @@
-import './globals.css'
+import Footer from "./components/Footer"
+import ChakraWrapper from "./components/chakra"
+import Container from "@chakra-ui/react"
+import Navbar from "./components/Navbar"
 
 export default function RootLayout({
   children,
@@ -12,7 +15,14 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <ChakraWrapper>
+
+          <Navbar />
+        {children}
+        <Footer />
+      </ChakraWrapper>
+      </body>
     </html>
   )
 }
