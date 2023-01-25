@@ -1,6 +1,7 @@
 import Footer from "./components/Footer"
 import ChakraWrapper from "./components/chakra"
 import Navbar from "./components/Navbar"
+import Stickey from "./components/Stickey"
 
 export default function RootLayout({
   children,
@@ -18,6 +19,7 @@ export default function RootLayout({
         <ChakraWrapper>
 
           <Navbar />
+        <Stickey/>
         {children}
         <Footer />
       </ChakraWrapper>
