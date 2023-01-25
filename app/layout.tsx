@@ -2,6 +2,7 @@ import Footer from "./components/Footer"
 import ChakraWrapper from "./components/chakra"
 import Navbar from "./components/Navbar"
 import Stickey from "./components/Stickey"
+import ThirdWebProvider from "./components/thirdwebProvider"
 
 export default function RootLayout({
   children,
@@ -17,11 +18,13 @@ export default function RootLayout({
       <head />
       <body>
         <ChakraWrapper>
+<ThirdWebProvider>
 
           <Navbar />
         <Stickey/>
         {children}
         <Footer />
+</ThirdWebProvider>
       </ChakraWrapper>
       </body>
     </html>

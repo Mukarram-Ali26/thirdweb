@@ -19,6 +19,7 @@ import {
     Button,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { ConnectWallet } from '@thirdweb-dev/react';
 // import { FaWhatsapp } from 'react-icons/fa';
 
 const NavList = [
@@ -50,8 +51,27 @@ const NavLink = ({ children, link }: { children: ReactNode, link: string }) => (
 
 export default function Navbar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
-
     const { colorMode, toggleColorMode } = useColorMode();
+    // const sdk = useSDK();
+    // const address = useAddress()
+    // // native currency balance
+    // const balance = await sdk.wallet.balance();
+    // // ERC20 token balance
+    // const erc20balance = await sdk.wallet.balance(tokenContractAddress);
+    // transfer 0.8 ETH
+    //  await sdk.wallet.transfer("0x...", 0.8);
+    //  // transfer 0.8 tokens of `tokenContractAddress`
+    // await sdk.wallet.transfer("0x...", 0.8, tokenContractAddress);
+    // This is the message to be signed
+    // const message = "Sign this message...";
+
+    // // Now we can sign the message with the connected wallet
+    // const signature = await sdk.wallet.sign(message);
+    // const message = "Sign this message...";
+    // const signature = await sdk.wallet.sign(message);
+
+    // // Now we can recover the signing address
+    // const address = sdk.wallet.recoverAddress(message, signature);
     return (
         <>
             <Box bg={useColorModeValue('gray.100', 'blue.800')} px={4} m={4} boxShadow="xl">
@@ -76,6 +96,7 @@ export default function Navbar() {
                             {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                         </Button>
                     </Flex>
+
                     <Spacer />
                     <IconButton
                         size={'md'}
@@ -94,6 +115,11 @@ export default function Navbar() {
                             ))}
 
                         </HStack>
+                        <Box >
+                            <ConnectWallet colorMode={useColorModeValue("light","dard")} auth={{
+                                loginOptional: true,
+                            }} />
+                        </Box>
                     </HStack>
                 </Flex>
 
@@ -106,11 +132,9 @@ export default function Navbar() {
                         </Stack>
                     </Box>
                 ) : null}
-            </Box>
-            {/* <Box sx={{ position: '-webkit-sticky', top: '10%', }}>
 
-<FaWhatsapp size='sm'/>
-</Box> */}
+            </Box>
+
         </>
     );
 }
