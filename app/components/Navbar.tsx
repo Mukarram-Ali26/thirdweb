@@ -1,7 +1,7 @@
 "use client"
 
 
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import Link from 'next/link';
 import {
     Box,
@@ -19,8 +19,9 @@ import {
     Button,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { ConnectWallet } from '@thirdweb-dev/react';
-// import { FaWhatsapp } from 'react-icons/fa';
+import { ConnectWallet} from '@thirdweb-dev/react';
+import { ethers } from 'ethers';
+import { ThirdwebSDK } from '@thirdweb-dev/sdk';
 
 const NavList = [
     {
@@ -54,8 +55,19 @@ export default function Navbar() {
     const { colorMode, toggleColorMode } = useColorMode();
     // const sdk = useSDK();
     // const address = useAddress()
-    // // native currency balance
-    // const balance = await sdk.wallet.balance();
+    // get a signer from somewhere (createRandom is being used purely for example purposes)
+const signer = ethers.Wallet.createRandom();
+
+// get an instance of the SDK with the signer already setup
+const sdk = ThirdwebSDK.fromSigner(signer, "goerli");
+    useEffect(() => {
+        async function justcall() {
+            
+            
+            // // native currency balance
+            // const balance = await sdk?.wallet.balance();
+            // console.log("--------------",balance);
+
     // // ERC20 token balance
     // const erc20balance = await sdk.wallet.balance(tokenContractAddress);
     // transfer 0.8 ETH
@@ -64,6 +76,9 @@ export default function Navbar() {
     // await sdk.wallet.transfer("0x...", 0.8, tokenContractAddress);
     // This is the message to be signed
     // const message = "Sign this message...";
+}
+        justcall()
+    }, [])
 
     // // Now we can sign the message with the connected wallet
     // const signature = await sdk.wallet.sign(message);
@@ -83,7 +98,7 @@ export default function Navbar() {
                                 href='/'
                                 rounded={'full'}
                                 cursor={'pointer'}
-                                minW={0}>
+                                >
                                 <Avatar
                                     size={'md'}
                                     src={
@@ -115,12 +130,10 @@ export default function Navbar() {
                             ))}
 
                         </HStack>
-                        <Box >
-                            <ConnectWallet colorMode={useColorModeValue("light","dard")} auth={{
+                            <ConnectWallet colorMode={useColorModeValue("light","dark")} auth={{
                                 loginOptional: true,
                             }} />
-                        </Box>
-                    </HStack>
+                    </HStack> 
                 </Flex>
 
                 {isOpen ? (

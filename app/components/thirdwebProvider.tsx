@@ -2,7 +2,7 @@
 
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 
-const activeChainId = ChainId.Mainnet;
+const activeChainId = ChainId.Goerli;
 
 function ThirdWebProvider({ children }: {
     children: React.ReactNode
