@@ -15,6 +15,7 @@ import { Web3Button, useAddress} from '@thirdweb-dev/react';
 import { formatEther, parseUnits } from 'ethers/lib/utils';
 import { ThirdwebSDK } from '@thirdweb-dev/sdk';
 import { BigNumber } from 'ethers';
+import Note from '../components/Note';
 
 const Token = () => {
   const [tokenBalance, setTokenBalance] = useState<string>()
@@ -67,12 +68,13 @@ const Token = () => {
       <Stack
         spacing={4}
         w={'full'}
-        maxW={'md'}
+        maxW={'lg'}
         bg={useColorModeValue('white', 'gray.700')}
         rounded={'xl'}
         boxShadow={'lg'}
-        p={6}
-        my={12}>
+        p={2}
+        my={1}>
+        <Note />
         <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
           Please enter ETH Amount  <br />
             <Text

@@ -1,7 +1,7 @@
 "use client"
 
 
-import { ReactNode, useEffect } from 'react';
+import { ReactNode} from 'react';
 import Link from 'next/link';
 import {
     Box,
@@ -20,8 +20,6 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { ConnectWallet} from '@thirdweb-dev/react';
-import { ethers } from 'ethers';
-import { ThirdwebSDK } from '@thirdweb-dev/sdk';
 
 const NavList = [
     // {
