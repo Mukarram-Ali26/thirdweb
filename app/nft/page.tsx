@@ -76,7 +76,7 @@ const Token = () => {
           p={6}
           my={12}>
           <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
-            Please Upload Your File <br />
+            Please Upload Your Info <br />
             <Text
               as='a'
               href={`https://goerli.etherscan.io/address/${TokenAddress}#code`}
@@ -105,7 +105,10 @@ const Token = () => {
             <Input
               _placeholder={{ color: 'gray.500' }}
               type="file"
-              onChange={(e) => setFile(e.target!.files[0]!)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                if (!e.target.files) return
+                setFile(e.target.files[0])
+              }}
             />
           </FormControl>
           <Stack spacing={6}>

@@ -74,13 +74,21 @@ const Token = () => {
         p={6}
         my={12}>
         <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
-          Please enter ETH Amount  
+          Please enter ETH Amount  <br />
+            <Text
+              as='a'
+              href={`https://goerli.etherscan.io/address/${TokenAddress}#code`}
+              target="_blank" rel="noopener noreferrer"
+              fontSize={{ base: 'sm', sm: 'md' }}
+              color={useColorModeValue('gray.800', 'gray.400')}>
+              Check the smart contract on EtherScan
+            </Text>
         </Heading>
         
         <Text
           fontSize={{ base: 'sm', sm: 'md' }}
           color={useColorModeValue('gray.800', 'gray.400')}>
-          Token Price is 0.01 ETH <b/> Your Token Balance is {tokenBalance}
+          Token Price is 0.01 ETH <b/> Your Token Balance is {tokenBalance ? tokenBalance : "please connect your wallet"}
         </Text>
         <FormControl id="email">
           <Input

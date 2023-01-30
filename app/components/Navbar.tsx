@@ -24,26 +24,26 @@ import { ethers } from 'ethers';
 import { ThirdwebSDK } from '@thirdweb-dev/sdk';
 
 const NavList = [
-    {
-        text: 'Sign Message',
-        link: '/signMessage'
-    },
+    // {
+    //     text: 'Sign Message',
+    //     link: '/signMessage'
+    // },
     {
         text: 'ERC20 TOKEN',
         link: '/token'
     },
-    {
-        text: 'MTKN Staking',
-        link: '/tokenStaking'
-    },
+    // {
+    //     text: 'MTKN Staking',
+    //     link: '/tokenStaking'
+    // },
     {
         text: 'NFT',
         link: '/nft'
     },
-    {
-        text: 'NFT Staking',
-        link: '/nftStaking'
-    },
+    // {
+    //     text: 'NFT Staking',
+    //     link: '/nftStaking'
+    // },
     {
         text: 'DEX',
         link: '/dex'
@@ -65,12 +65,12 @@ export default function Navbar() {
     // const sdk = useSDK();
     // const address = useAddress()
     // get a signer from somewhere (createRandom is being used purely for example purposes)
-const signer = ethers.Wallet.createRandom();
+// const signer = ethers.Wallet.createRandom();
 
 // get an instance of the SDK with the signer already setup
-const sdk = ThirdwebSDK.fromSigner(signer, "goerli");
-    useEffect(() => {
-        async function justcall() {
+// const sdk = ThirdwebSDK.fromSigner(signer, "goerli");
+    // useEffect(() => {
+    //     async function justcall() {
             
             
             // // native currency balance
@@ -85,9 +85,9 @@ const sdk = ThirdwebSDK.fromSigner(signer, "goerli");
     // await sdk.wallet.transfer("0x...", 0.8, tokenContractAddress);
     // This is the message to be signed
     // const message = "Sign this message...";
-}
-        justcall()
-    }, [])
+// }
+//         justcall()
+//     }, [])
 
     // // Now we can sign the message with the connected wallet
     // const signature = await sdk.wallet.sign(message);
