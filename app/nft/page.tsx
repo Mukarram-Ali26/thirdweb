@@ -26,7 +26,7 @@ import { ThirdwebSDK } from '@thirdweb-dev/sdk';
 
 const Token = () => {
   const [tokenBalance, setTokenBalance] = useState<string>()
-  const [file, setFile] = useState<string | HTMLInputElement>()
+  const [file, setFile] = useState<File | null>(null)
   const [name, setName] = useState<string>('')
   const [nftContract, setNFTContract] = useState<NFTContract>()
   const toast = useToast()
@@ -183,7 +183,7 @@ const Token = () => {
                   duration: 9000,
                   isClosable: true,
                 })
-                setFile('')
+                setFile(null)
                 setName('')
                 // console.log(await txt.transactionHash);
               }
@@ -255,7 +255,7 @@ const Token = () => {
                     height={230}
                     width={282}
                     objectFit={'cover'}
-                    src={nfts.metadata.image}
+                    src={(nfts.metadata.image)?.toString()}
                   />
                 </Box>
                 <Stack pt={10} align={'center'}>
