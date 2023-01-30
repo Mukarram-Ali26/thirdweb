@@ -74,13 +74,13 @@ const Token = () => {
         p={6}
         my={12}>
         <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
-          Please enter ETH Amount  {tokenBalance}
+          Please enter ETH Amount  
         </Heading>
         
         <Text
           fontSize={{ base: 'sm', sm: 'md' }}
           color={useColorModeValue('gray.800', 'gray.400')}>
-          You&apos;ll get an email with a reset link
+          Token Price is 0.01 ETH <b/> Your Token Balance is {tokenBalance}
         </Text>
         <FormControl id="email">
           <Input

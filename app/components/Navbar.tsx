@@ -25,21 +25,30 @@ import { ThirdwebSDK } from '@thirdweb-dev/sdk';
 
 const NavList = [
     {
+        text: 'Sign Message',
+        link: '/signMessage'
+    },
+    {
         text: 'ERC20 TOKEN',
         link: '/token'
+    },
+    {
+        text: 'MTKN Staking',
+        link: '/tokenStaking'
     },
     {
         text: 'NFT',
         link: '/nft'
     },
     {
-        text: 'Staking',
-        link: '/Stacking'
+        text: 'NFT Staking',
+        link: '/nftStaking'
     },
     {
-        text: 'Sign Message',
-        link: '/Message'
+        text: 'DEX',
+        link: '/dex'
     },
+    
 
 ]
 
