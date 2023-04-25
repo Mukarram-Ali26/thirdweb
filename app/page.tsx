@@ -3,9 +3,10 @@
 
 import Hero from "./components/Home";
 
-// const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default async function Home() {
+  // console.log(process.env.CONTENTFUL_ID, process.env.CONTENTFUL_ACCESS_TOKEN);
+
   return (
     <><Hero /></>
   )
