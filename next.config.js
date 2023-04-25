@@ -4,8 +4,8 @@ const nextConfig = {
     appDir: true,
   },
   env: {
-    CONTENTFUL_SPACE_ID: `${process.env.CONTENTFUL_ID}`,
-    CONTENTFUL_ACCESS_KEY: `${process.env.CONTENTFUL_ACCESS_TOKEN}`
+    CONTENTFUL_SPACE_ID: `${process.env.NEXT_PUBLIC_CONTENTFUL_ID}`,
+    CONTENTFUL_ACCESS_KEY: `${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`
   },
   images: {
     remotePatterns: [

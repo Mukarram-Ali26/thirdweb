@@ -8,7 +8,7 @@ import Link from 'next/link';
 // const fetcher = (url: string) => fetch(url).then(res => res.json())
 const News = (props:any) => {
     // const { data, error, isLoading } = useSWR(url, fetcher)
-    // console.log(process.env.CONTENTFUL_ID, process.env.CONTENTFUL_ACCESS_TOKEN);
+    // console.log(process.env.NEXT_PUBLIC_CONTENTFUL_ID, process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN);
     console.log(props?.news);
     
   return (

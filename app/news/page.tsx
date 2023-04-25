@@ -2,7 +2,7 @@
 import React from 'react'
 import News from '../components/News';
 async function getNews() {
-    const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_ID}/entries?access_token=${process.env.CONTENTFUL_ACCESS_TOKEN}&content_type=news`, { cache: 'no-store' });
+    const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_ID}/entries?access_token=${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}&content_type=news`, { cache: 'no-store' });
 
     // Recommendation: handle errors
     if (!res.ok) {
