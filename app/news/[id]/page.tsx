@@ -1,5 +1,5 @@
 import Post from '@/app/components/Post';
-import React from 'react'
+import React, { Suspense } from 'react'
 
 const page = async ({ params }: { params: { id: string } }) => {
     async function getNews() {
@@ -19,7 +19,10 @@ const page = async ({ params }: { params: { id: string } }) => {
 
     return (
         <div>
+            <Suspense fallback={<>Loading...</>}>
+
             <Post id={params?.id} news={news} />
+        </Suspense>
         </div>
     )
 }
