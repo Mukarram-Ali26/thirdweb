@@ -3,6 +3,7 @@ import ChakraWrapper from "./components/chakra"
 import Navbar from "./components/Navbar"
 import Stickey from "./components/Stickey"
 import ThirdWebProvider from "./components/thirdwebProvider"
+import CTA from "./components/CTA"
 
 export default function RootLayout({
   children,
@@ -23,6 +24,7 @@ export default function RootLayout({
           <Navbar />
         <Stickey/>
         {children}
+        <CTA/>
         <Footer />
 </ThirdWebProvider>
       </ChakraWrapper>

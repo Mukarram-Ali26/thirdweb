@@ -38,13 +38,13 @@ const NavList = [
         text: 'NFT',
         link: '/nft'
     },
-    // {
-    //     text: 'NFT Staking',
-    //     link: '/nftStaking'
-    // },
     {
         text: 'DEX',
         link: '/dex'
+    },
+    {
+        text: 'NEWS',
+        link: '/news'
     },
     
 
