@@ -23,7 +23,7 @@ const News = (props: any) => {
 
                         <Box position="relative" key={i}>
 
-                            <span type="button" onClick={() => router.push(`/news/${n?.sys?.id}`)} >
+                            {/* <a  onClick={() => router.push(`/news/${n?.sys?.id}`)} > */}
                              {/* href={`/news/${n?.sys?.id}`} */}
                             
                                 <Box
@@ -55,7 +55,10 @@ const News = (props: any) => {
                                                     fontSize="xl"
 
                                                 >
-                                                    {documentToReactComponents(n?.fields?.description)}
+                                                     <button type="button" onClick={() => router.push(`/news/${n?.sys?.id}`)}>
+      Read More...
+    </button>
+                                                    {/* {documentToReactComponents(n?.fields?.description)} */}
                                                 </chakra.p>
                                             </Center>
                                         <Box>
@@ -78,7 +81,7 @@ const News = (props: any) => {
                     </Text> */}
                                     </Box>
                                 </Box>
-                        </span>
+                        {/* </a> */}
                             </Box >
                     ))}
                 </SimpleGrid>
