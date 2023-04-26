@@ -23,7 +23,7 @@ const News = (props: any) => {
 
                         <Box position="relative" key={i}>
 
-                            <Box type="button" onClick={() => router.push(`/news/${n?.sys?.id}`)} >
+                            <span type="button" onClick={() => router.push(`/news/${n?.sys?.id}`)} >
                              {/* href={`/news/${n?.sys?.id}`} */}
                             
                                 <Box
@@ -78,8 +78,8 @@ const News = (props: any) => {
                     </Text> */}
                                     </Box>
                                 </Box>
+                        </span>
                             </Box >
-                        </Box>
                     ))}
                 </SimpleGrid>
 
