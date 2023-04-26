@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { chakra, Box, Badge, SimpleGrid, Container, Image, Center } from '@chakra-ui/react';
+import { chakra, Box, Badge, SimpleGrid, Container, Image, Center, Text, Spacer } from '@chakra-ui/react';
 import Link from 'next/link';
 // import useSWR from 'swr'
 // const url = `https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_ID}/entries?access_token=${process.env.CONTENTFUL_ACCESS_TOKEN}&content_type=news`
@@ -34,27 +34,28 @@ const News = (props: any) => {
                                     </Center>
                                     <Box p={{ base: 4, lg: 6 }}>
                                             <Center> 
-                                            <Box
+                                            <Text
                                                 fontWeight="bold"
-                                                as="h1"
+                                                fontSize="2xl"
                                                 letterSpacing="wide"
                                                 textTransform="uppercase"
-                                                ml="2"
+                                                // ml="2"
                                             >
                                                 {n?.fields?.title}
-                                            </Box>
+                                            </Text>
                                               </Center> 
                                             <Center>
 
                                                 <chakra.p
                                                     mt={2}
-                                                    fontSize="2xl"
+                                                    fontSize="xl"
 
                                                 >
                                                     {documentToReactComponents(n?.fields?.description)}
                                                 </chakra.p>
                                             </Center>
                                         <Box>
+                                            <Spacer/>
                                             <Box color="gray.600" fontSize="sm">
                                                 <Badge rounded="full" px="2" colorScheme="teal">
                                                     BY: Mukarram Ali
