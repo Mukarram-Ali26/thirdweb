@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { chakra, Box, Stack, Flex, Link, Center } from "@chakra-ui/react";
 import { FaWhatsapp } from 'react-icons/fa'

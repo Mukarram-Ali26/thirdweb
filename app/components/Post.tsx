@@ -13,7 +13,7 @@ export async function generateMetadata(props : any) {
   }
 const Post = (props: any) => {
 
-    console.log(props.id, props.news);
+    // console.log(props.id, props.news);
     // console.log(data);
     return (
         <div>
