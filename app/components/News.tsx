@@ -18,7 +18,6 @@ const News = (props:any) => {
             
       
         {props?.news?.items?.map((n: any, i: number) => (
-            <span key={i}>
                 
                 <Box position="relative" key={i}>
               
@@ -34,7 +33,7 @@ const News = (props:any) => {
                     <Image src={n?.fields?.image} alt={n?.fields?.title} objectFit={'fill'}/>
                     </Center> 
                   <Box p={{ base: 4, lg: 6 }}>
-                    <Box d="flex" alignItems="baseline">
+                    <Box display="flex" alignItems="baseline">
                       <Box
                         fontWeight="semibold"
                         as="h2"
@@ -66,7 +65,6 @@ const News = (props:any) => {
                 </Box>
               </Link>
             </Box>
-            </span>
         ))}
        </SimpleGrid>
 
