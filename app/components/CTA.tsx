@@ -7,7 +7,7 @@ const CTA = () => {
         <div> <Flex
             bg="#edf3f8"
             _dark={{ bg: "#3e3e3e" }}
-            p={50}
+            // py={50}
             w="full"
             alignItems="center"
             justifyContent="center"

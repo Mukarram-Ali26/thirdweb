@@ -20,9 +20,8 @@ const page = async ({ params }: { params: { id: string } }) => {
     return (
         <div>
             <Suspense fallback={<>Loading...</>}>
-
-            <Post id={params?.id} news={news} />
-        </Suspense>
+                {params.id && <Post id={params?.id} news={news} />}
+            </Suspense>
         </div>
     )
 }
