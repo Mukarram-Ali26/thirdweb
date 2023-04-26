@@ -3,6 +3,14 @@ import React from 'react'
 import { Box, Center, Flex, Image,  Text, chakra } from "@chakra-ui/react";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
+export async function generateMetadata(props : any) {
+    
+    return { title: props?.news?.fields?.title,
+        description: documentToReactComponents(props?.news?.fields?.description),
+         openGraph: {
+        images: [props?.news?.fields?.image],
+      }, }
+  }
 const Post = (props: any) => {
 
     console.log(props.id, props.news);

@@ -5,7 +5,7 @@ export default function Head() {
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="Mukarram Ali" content="email4mukarram" />
       <link rel="icon" href="https://images.ctfassets.net/bpbqpx524mlk/1YwimNfxaQdRFHKIphRVPQ/72eaf6b3c88027244863ef12375fc36d/WhatsApp_Image_2022-12-16_at_11.23.27_PM.jpeg?h=250" />
-      <meta name="application-name" content="PWA App" />
+      {/* <meta name="application-name" content="Mukarram Ali" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mukarram Ali" />
@@ -41,7 +41,7 @@ export default function Head() {
 <meta property="og:site_name" content="Mukarram Ali" />
 <meta property="og:url" content="https://email4mukarram.vercel.app" />
 <meta property="og:image" content="https:/email4mukarram.vercel.app/assets/mukarramali.jpeg" />
-
+ */}
 
     </>
   )
